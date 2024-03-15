@@ -93,6 +93,7 @@ body {
 .container {
 	max-width: 1920px;
 	margin: 0 auto;
+	padding: 0 20px 0 20px;
 }
 
 /* === 3. HEADER === */
@@ -120,15 +121,16 @@ menu {
 	height: 100%;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: right;
 }
 
 .menuContainer {
 	width: 100%;
+	height: 100%;
 	margin: 0px auto;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: right;
 	flex-wrap: nowrap;
 }
 
@@ -136,16 +138,15 @@ menu {
 	display: none;
 }
 
-.menuList>li:last-child {
-	margin: 0 0 0 0;
-}
-
 .menuList>li {
 	position: relative;
 	width: fit-content;
 	margin-right: calc(24px + (59 - 24) * ((100vw - 991px) / (1920 - 991)));
 }
-@media (min-width: 1920px) {
+.menuList>li:last-child {
+	margin-right: 0;
+}
+@media (min-width: 1921px) {
 	.menuList>li {
 		margin-right: 70px;
 	}
@@ -158,7 +159,7 @@ menu {
 	border-top: 2px solid transparent;
 	transition: border-bottom 1s ease, border-top 1s ease;
 }
-@media (min-width: 1920px) {
+@media (min-width: 1921px) {
 	.menuLink {
 		font-size: 24px;
 	}
@@ -400,20 +401,31 @@ body._touch .menuList>li._active .menuArrow {
 .main-page-container {
 	margin: 0 auto;
 	max-width: 1960px;
+	
 }
 main.homepage {
 	width: 100%;
+	height: 100%;
 	height: calc(100vh - 180px);
-	background-image: url('../../../background_image.png');
-	background-size: cover;
+	/* background-image: url('../../../background_image.png'); */
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
 	color: #fff;
 }
-
+#main-page-photo {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+#main-page-photo img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
 @media (max-width: 991px) {
 	main.homepage {
-		background-image: url('../../../background_image_mobile.png');
+		/* background-image: url('../../../background_image_mobile.png'); */
 		background-size: cover;
 	}
 }
@@ -429,9 +441,10 @@ footer {
 	justify-content: space-between;
 	color: #fff;
 }
+
 .line {
 	margin-bottom: 10px;
-	font-size: calc(16px + (20 - 16) * ((100vw - 991px) / (1920 - 991)));
+	font-size: calc(12px + (12 - 12) * ((100vw - 320px) / (1920 - 320)));
 }
 #legal {
 	text-align: right;
@@ -447,7 +460,6 @@ footer {
 		height: 100%;
 		display: flex;
 		flex-direction: column-reverse;
-		font-size: 12px;
 	}
 	.copyright {
 		display: flex;
