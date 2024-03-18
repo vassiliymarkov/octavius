@@ -161,7 +161,7 @@ menu {
 }
 @media (min-width: 1921px) {
 	.menuLink {
-		font-size: 24px;
+		font-size: 23px;
 	}
 }
 .menuLink:hover {
@@ -399,35 +399,22 @@ body._touch .menuList>li._active .menuArrow {
 
 /* === 4. MAIN === */
 .main-page-container {
-	margin: 0 auto;
-	max-width: 1960px;
-	
+    width: 100%;
+    height: calc(100vh - 180px);
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden; /* Чтобы избежать появления горизонтальной прокрутки */
 }
-main.homepage {
-	width: 100%;
-	height: 100%;
-	height: calc(100vh - 180px);
-	/* background-image: url('../../../background_image.png'); */
-	background-size: contain;
-	background-position: center;
-	background-repeat: no-repeat;
-	color: #fff;
+
+.image-container {
+    width: 100%;
+    height: 100%;
 }
-#main-page-photo {
-	margin: 0 auto;
-	width: 100%;
-	height: 100%;
-}
-#main-page-photo img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-}
-@media (max-width: 991px) {
-	main.homepage {
-		/* background-image: url('../../../background_image_mobile.png'); */
-		background-size: cover;
-	}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
 }
 
 /* 5. === FOOTER === */
