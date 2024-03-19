@@ -93,10 +93,12 @@ $(document).ready(function() {
 
 // LOADER
 let mask = document.querySelector(".mask");
+let text = document.querySelector(".text");
 
     window.addEventListener("load", () => {
         mask.classList.add("hidden");
+		text.classList.add("moved");
         setTimeout(() => {
             mask.remove();
-        }, 3000); // Убрана лишняя закрывающая скобка и время указано внутри setTimeout()
+        }, 3000);
     });
