@@ -90,6 +90,29 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
+.mask {
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 5;
+	transition: 3s;
+}
+.hidden {
+	opacity: 0;
+}
+.text {
+	color: #fff;
+	z-index: 6;
+	font-family: "Dynalight", cursive;
+	font-size: 72px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
 .container {
 	max-width: 1920px;
 	margin: 0 auto;
@@ -109,10 +132,12 @@ header {
 }
 
 .logo {
+	width: 50%;
+}
+#logo {
 	font-family: "Dynalight", cursive;
 	font-size: calc(30px + (48 - 30) * ((100vw - 320px) / (1920 - 320)));
 	color: #fff;
-	width: 50%;
 }
 
 /* == 3.1 MENU === */
@@ -155,21 +180,15 @@ menu {
 	color: #fff;
 	font-size: calc(13px + (24 - 13) * ((100vw - 991px) / (1920 - 991)));
 	text-decoration: none;
-	border-bottom: 2px solid transparent;
-	border-top: 2px solid transparent;
-	transition: border-bottom 1s ease, border-top 1s ease;
+}
+.menuLink:hover {
+	opacity: 0.8;
 }
 @media (min-width: 1921px) {
 	.menuLink {
-		font-size: 23px;
+		font-size: 24px;
 	}
 }
-.menuLink:hover {
-	color: #038596;
-	border-bottom: 2px solid #038596;
-	border-top: 2px solid #038596;
-}
-
 .menuSubList {
 	position: absolute;
 	top: 110%;

@@ -56,7 +56,7 @@ if (iconMenu) {
 
 
 // Прокрутка при клике
-const menuLinks = document.querySelectorAll('.menuLink[data-goto]');
+const menuLinks = document.querySelectorAll('.menuLink');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);
@@ -64,8 +64,8 @@ if (menuLinks.length > 0) {
 
     function onMenuLinkClick(e) {
         const menuLink = e.target;
-        if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
-            const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        if (menuLink && document.querySelector(menuLink)) {
+            const gotoBlock = document.querySelector(menuLink);
 
             if (iconMenu.classList.contains('_active')) {
                 document.body.classList.remove('_lock');
@@ -90,3 +90,13 @@ $(document).ready(function() {
 		next();
 	});
 });
+
+// LOADER
+let mask = document.querySelector(".mask");
+
+    window.addEventListener("load", () => {
+        mask.classList.add("hidden");
+        setTimeout(() => {
+            mask.remove();
+        }, 3000); // Убрана лишняя закрывающая скобка и время указано внутри setTimeout()
+    });
