@@ -95,10 +95,28 @@ $(document).ready(function() {
 let mask = document.querySelector(".mask");
 let text = document.querySelector(".text");
 
-    window.addEventListener("load", () => {
-        mask.classList.add("hidden");
-		text.classList.add("moved");
+window.addEventListener("load", () => {
+    // Показываем маску
+    mask.style.opacity = "1";
+
+    setTimeout(() => {
+        // Показываем текст через 2 секунды после появления маски
+        text.classList.remove("hidden");
+        
         setTimeout(() => {
-            mask.remove();
-        }, 3000);
-    });
+            // Плавно исчезаем текст через 3 секунды
+            text.style.opacity = "0";
+            
+            setTimeout(() => {
+                // Плавно исчезаем маску через 1 секунду после исчезновения текста
+                mask.style.transition = "opacity 1s";
+                mask.style.opacity = "0";
+                
+                setTimeout(() => {
+                    // Удаляем маску после исчезновения
+                    mask.remove();
+                }, 1000); // Задержка в 1 секунду после исчезновения маски
+            }, 3000); // Задержка в 3 секунды перед исчезновением текста
+        }, 2000); // Задержка в 2 секунды перед появлением текста
+    }, 2000); // Задержка в 2 секунды перед появлением текста
+});
