@@ -90,29 +90,35 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 
+.text {
+    color: #fff;
+    z-index: 7; /* Убедимся, что z-index текста выше, чем у маски */
+    font-family: "Dynalight", cursive;
+    font-size: 72px;
+    opacity: 0; /* Начальное значение непрозрачности */
+    position: fixed; /* Позиционируем текст относительно окна просмотра */
+    top: 50%; /* Располагаем текст по вертикали на середине */
+    left: 50%; /* Располагаем текст по горизонтали на середине */
+    transform: translate(-50%, -50%); /* Центрируем текст относительно своих размеров */
+    transition: opacity 2s ease-in-out; /* Плавное изменение прозрачности */
+}
+
 .mask {
-	width: 100%;
-	height: 100%;
-	background-color: #000;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 5;
-	transition: opacity 10s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 6; /* Убедимся, что z-index маски ниже, чем у текста */
+    opacity: 1; /* Начальное значение непрозрачности */
+    transition: opacity 1s ease-in-out 2s; /* Плавное изменение прозрачности с задержкой в 2 секунды */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .hidden {
 	opacity: 0;
-}
-.text {
-	color: #fff;
-	z-index: 6;
-	font-family: "Dynalight", cursive;
-	font-size: 72px;
-	opacity: 1;
-	transition: opacity 2s;
 }
 
 .container {
