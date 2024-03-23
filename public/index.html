@@ -11,17 +11,22 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dynalight&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Octavius</title>
 </head>
 
 <body>
-    <div class="mask">
+    <!-- <div class="mask">
         <div class="text">
             Octavius
-        </div>                
+        </div>
+    </div> -->
+
+    <div class="overlay">
+
     </div>
-    
 
     <div class="container">
         <header>
@@ -70,9 +75,28 @@
                 <img src="assets/img/bi.png" alt="">
             </picture>
         </div>
+
+        <div class="slider-main-page">
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="../01s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../02s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../03s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../06s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../07s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../08s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../10s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../11s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../12s.jpeg" alt=""></div>
+                    <div class="swiper-slide"><img src="../07s.jpeg" alt=""></div>
+                    ...
+                </div>
+            </div>
+        </div>
+
     </main>
-
-
 
     <div class="container">
         <footer>
@@ -88,7 +112,9 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="assets/script/script.js"></script>
+    <script src="assets/script/swiper_one.js"></script>
 
 </body>
 
