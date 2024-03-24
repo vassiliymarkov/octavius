@@ -456,11 +456,12 @@ body._touch .menuList>li._active .menuArrow {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: auto;
+	width: 1920px;
+	height: 200px;
 	z-index: 5;
 	position: absolute;
-	bottom: 120px;
+	bottom: 100px;
+	overflow: hidden;
 }
 .swiper {
 	width: 100%;
@@ -472,19 +473,30 @@ body._touch .menuList>li._active .menuArrow {
 }
 .swiper-wrapper {
     display: flex;
-    justify-content: space-between; /* Центрируем содержимое по горизонтали */
-    align-items: center; /* Центрируем содержимое по вертикали */
-	width: 100%; /* Ширина равна ширине родительского контейнера */
-    height: fit-content; /* Высота равна высоте родительского контейнера */
+    justify-content: space-between;
+    align-items: center;
+	width: 100%;
+    height: fit-content;
 }
-
+.swiper-slide {
+	border: 1px solid red;
+	width: 150px;
+	height: 84px;
+    transition: transform 0.5s ease;
+    padding: 0;
+}
 .swiper-slide img {
 	width: 100%;
 	height: auto;
 }
-.swiper-slide {
-    transition: transform 0.5s ease;
-    transform-origin: center center;
+
+.overlay-slider {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	bottom: 90px;
+	background-color: #000;
+	opacity: 0.5;
 }
 
 /* 5. === FOOTER === */
