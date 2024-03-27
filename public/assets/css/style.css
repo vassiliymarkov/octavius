@@ -479,7 +479,6 @@ body._touch .menuList>li._active .menuArrow {
     height: fit-content;
 }
 .swiper-slide {
-	border: 1px solid red;
 	width: 150px;
 	height: 84px;
     transition: transform 0.5s ease;
