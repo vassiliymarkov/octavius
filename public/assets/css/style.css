@@ -447,7 +447,7 @@ body._touch .menuList>li._active .menuArrow {
 	top: 80px;
 	left: 0;
 	width: 100vw;
-	height: calc(100% - 120px);
+	height: calc(100% - 170px);
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 2;
