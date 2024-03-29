@@ -538,7 +538,7 @@ body._touch .menuList>li._active .menuArrow {
 }
 @media (min-width: 1600px) {
 	.slider-main-page {
-		bottom: 100px;
+		bottom: 80px;
 	}
 }
 @media (min-width: 1920px) {
