@@ -538,12 +538,12 @@ body._touch .menuList>li._active .menuArrow {
 }
 @media (min-width: 1600px) {
 	.slider-main-page {
-		bottom: 80px;
+		bottom: 70px;
 	}
 }
 @media (min-width: 1920px) {
 	.slider-main-page {
-		bottom: 110px;
+		bottom: 80px;
 	}
 }
 .overlay-slider {
