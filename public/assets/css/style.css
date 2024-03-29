@@ -119,16 +119,6 @@ body {
 		font-size: 64px;
 	}
 }
-.overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: #000;
-	opacity: 0.5;
-}
-
 .container {
 	max-width: 1920px;
 	margin: 0 auto;
@@ -439,6 +429,7 @@ body._touch .menuList>li._active .menuArrow {
     max-width: 1920px;
     margin: 0 auto;
     overflow: hidden; /* Чтобы избежать появления горизонтальной прокрутки */
+	/* position: absolute; */
 }
 
 .image-container {
@@ -451,18 +442,50 @@ body._touch .menuList>li._active .menuArrow {
     height: 100%;
     object-fit: cover; /* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
 }
-
+.overlay {
+	position: absolute;
+	top: 80px;
+	left: 0;
+	width: 100vw;
+	height: calc(100% - 120px);
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 2;
+}
+.citation-wraper {
+	position: fixed;
+	margin-top: 20%;
+	margin-left: 10%;
+	color: #fff;
+	z-index: 10;
+	font-family: "Dynalight", cursive;
+	font-size: 60px;
+	display: none;
+	flex-direction: column;
+	height: auto;
+	justify-content: space-evenly;
+	font-family: "Dynalight", cursive;
+	font-size: 60px;
+}
+.picasso {
+	margin-top: 20px;
+	text-align: right;
+}
 .slider-main-page {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 1920px;
+	max-width: 1880px;
 	height: 200px;
+	margin: 0 auto;
 	z-index: 5;
-	position: absolute;
-	bottom: 100px;
+	position: fixed;
+	bottom: 120px;
+	left: 0;
+	right: 0;
 	overflow: hidden;
 }
+
 .swiper {
 	width: 100%;
 	height: 100%;
@@ -476,12 +499,11 @@ body._touch .menuList>li._active .menuArrow {
     justify-content: space-between;
     align-items: center;
 	width: 100%;
-    height: fit-content;
+    height: 100%;
 }
 .swiper-slide {
-	border: 1px solid red;
-	width: 150px;
-	height: 84px;
+	width: 100%;
+	height: auto;
     transition: transform 0.5s ease;
     padding: 0;
 }
@@ -489,14 +511,49 @@ body._touch .menuList>li._active .menuArrow {
 	width: 100%;
 	height: auto;
 }
-
+@media (min-width: 320px) {
+	.slider-main-page {
+		bottom: 70px;
+	}
+}
+@media (min-width: 480px) {
+	.slider-main-page {
+		bottom: 50px;
+	}
+}
+@media (min-width: 640px) {
+	.slider-main-page {
+		bottom: 50px;
+	}
+}
+@media (min-width: 768px) {
+	.slider-main-page {
+		bottom: 70px;
+	}
+}
+@media (min-width: 991px) {
+	.slider-main-page {
+		bottom: 70px;
+	}
+}
+@media (min-width: 1600px) {
+	.slider-main-page {
+		bottom: 100px;
+	}
+}
+@media (min-width: 1920px) {
+	.slider-main-page {
+		bottom: 110px;
+	}
+}
 .overlay-slider {
 	width: 100%;
-	height: 200px;
+	height: 220px;
 	position: absolute;
-	bottom: 90px;
+	bottom: 110px;
 	background-color: #000;
 	opacity: 0.5;
+	display: none;
 }
 
 /* 5. === FOOTER === */
