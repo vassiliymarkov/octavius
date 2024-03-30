@@ -89,6 +89,10 @@ body {
 	background-color: #000000;
 	font-family: "Montserrat", sans-serif;
 }
+.global-container {
+	width: 100vw;
+	height: 100vh;
+}
 .mask {
     width: 100%;
     height: 100%;
