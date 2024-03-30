@@ -90,8 +90,8 @@ body {
 	font-family: "Montserrat", sans-serif;
 }
 .global-container {
-	width: 100vw;
-	height: 100vh;
+	max-width: 100vw;
+	max-height: 100vh;
 }
 .mask {
     width: 100%;
