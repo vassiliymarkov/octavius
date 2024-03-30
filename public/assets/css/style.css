@@ -451,6 +451,7 @@ body._touch .menuList>li._active .menuArrow {
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 2;
+	display: none;
 }
 .citation-wraper {
 	position: fixed;
@@ -460,7 +461,6 @@ body._touch .menuList>li._active .menuArrow {
 	z-index: 10;
 	font-family: "Dynalight", cursive;
 	font-size: 60px;
-	display: none;
 	flex-direction: column;
 	height: auto;
 	justify-content: space-evenly;
