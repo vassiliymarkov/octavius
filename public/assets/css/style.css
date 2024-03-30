@@ -518,7 +518,7 @@ body._touch .menuList>li._active .menuArrow {
 }
 @media (min-width: 320px) {
 	.slider-main-page {
-		bottom: 55px;
+		bottom: 35px;
 	}
 }
 @media (min-width: 480px) {
@@ -580,8 +580,6 @@ footer {
 #legal {
 	text-align: right;
 }
-
-
 
 @media (max-width: 575px) {
 	
