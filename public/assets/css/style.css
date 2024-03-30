@@ -451,7 +451,7 @@ body._touch .menuList>li._active .menuArrow {
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 2;
-	display: none;
+	/* display: none; */
 }
 .citation-wraper {
 	position: fixed;
