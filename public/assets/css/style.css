@@ -439,8 +439,8 @@ body._touch .menuList>li._active .menuArrow {
 
 .image-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
+    height: calc(100vh - 180px);
+	object-fit: cover; /* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
 }
 .overlay {
 	position: absolute;
