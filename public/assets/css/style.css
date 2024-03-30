@@ -466,6 +466,7 @@ body._touch .menuList>li._active .menuArrow {
 	justify-content: space-evenly;
 	font-family: "Dynalight", cursive;
 	font-size: 60px;
+	display: none;
 }
 .picasso {
 	margin-top: 20px;
