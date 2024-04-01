@@ -451,7 +451,7 @@ body._touch .menuList>li._active .menuArrow {
 	top: 80px;
 	left: 0;
 	width: 100vw;
-	height: calc(100% - 130px);
+	height: calc(100% - 120px);
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 2;
@@ -557,6 +557,7 @@ footer {
 	align-items: center;
 	justify-content: space-between;
 	color: #fff;
+	z-index: 5;
 }
 
 .line {
@@ -575,7 +576,6 @@ footer {
 		height: 85px;
 		display: flex;
 		flex-direction: column-reverse;
-		z-index: 3;
 	}
 	.copyright {
 		display: flex;
