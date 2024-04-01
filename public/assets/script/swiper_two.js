@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         // when window width is >= 640px
         640: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 10
         },
         768: {
@@ -26,16 +26,16 @@ document.addEventListener("DOMContentLoaded", function() {
           spaceBetween: 20
         },
         991: {
-          slidesPerView: 4,
+          slidesPerView: 3,
           spaceBetween: 20
         },
         1200: {
-          slidesPerView: 7,
+          slidesPerView: 3,
           spaceBetween: 20
         },
         1920: {
-          slidesPerView: 5,
-          spaceBetween: 20
+          slidesPerView: 3,
+          spaceBetween: 30
         }
       },
 
