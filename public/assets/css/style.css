@@ -550,6 +550,7 @@ body._touch .menuList>li._active .menuArrow {
 /* 5. === FOOTER === */
 
 footer {
+	position: relative;
 	width: 100%;
 	height: 50px;
 	margin-top: 25px;
@@ -576,6 +577,7 @@ footer {
 		height: 85px;
 		display: flex;
 		flex-direction: column-reverse;
+		z-index: 5;
 	}
 	.copyright {
 		display: flex;
