@@ -91,7 +91,7 @@ body {
 }
 .global-container {
 	max-width: 100vw;
-	max-height: 100vh;
+	max-height: 100%;
 }
 .mask {
     width: 100%;
@@ -369,7 +369,7 @@ body._touch .menuList>li._active .menuArrow {
 		width: 100%;
 		top: 100px;
 		left: 0;
-		height: 70px;
+		height: 10px;
 		z-index: 20;
 	}
 
@@ -611,3 +611,43 @@ footer {
 }
 
 /* FOOTER END */
+
+/* *** ABOUT PAGE *** */
+
+.slider-about {
+	border: àpx solid red;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1880px;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.swiper {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	width: 100%;
+    height: 200px;
+}
+.swiper-slide {
+	width: 100%;
+	height: 200px;
+    transition: transform 0.5s ease;
+    padding: 0;
+}
+.swiper-slide img {
+	width: 100%;
+	height: auto;
+}

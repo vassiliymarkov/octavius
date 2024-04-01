@@ -1,9 +1,7 @@
 const swiper = new Swiper('.swiper', {
   speed: 100,
   centeredSlides: true,
-  /* slidesPerView: 5,
-  spaceBetween: 20, */
-
+  
   breakpoints: {
     // when window width is >= 320px
     320: {
