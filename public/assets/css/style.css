@@ -515,7 +515,7 @@ body._touch .menuList>li._active .menuArrow {
 	margin: 0 auto;
 	z-index: 4;
 	position: fixed;
-	bottom: 10%;
+	bottom: 60px;
 	left: 0;
 	right: 0;
 	overflow: hidden;
