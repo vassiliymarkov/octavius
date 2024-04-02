@@ -564,6 +564,13 @@ footer {
 	color: #fff;
 	z-index: 5;
 }
+.footer-link {
+	color: #fff;
+	text-decoration: none;
+}
+.footer-link:hover {
+	opacity: 0.8;
+}
 
 .line {
 	margin-bottom: 10px;
