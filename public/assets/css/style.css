@@ -89,53 +89,62 @@ body {
 	background-color: #000000;
 	font-family: "Montserrat", sans-serif;
 }
-.global-container {
-	max-width: 100vw;
-	max-height: 100%;
+
+.container {
+	max-width: 1920px;
+	max-height: 100vh;
+	margin: 0 auto;
+	padding: 0 20px 0 20px;
+	position: relative;
 }
+
 .mask {
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 6; /* Убедимся, что z-index маски ниже, чем у текста */
-    opacity: 1; /* Начальное значение непрозрачности */
-    transition: opacity 1s ease-in-out 2s; /* Плавное изменение прозрачности с задержкой в 2 секунды */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 6;
+	/* Убедимся, что z-index маски ниже, чем у текста */
+	opacity: 1;
+	/* Начальное значение непрозрачности */
+	transition: opacity 1s ease-in-out 2s;
+	/* Плавное изменение прозрачности с задержкой в 2 секунды */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 .hidden {
 	opacity: 0;
 }
+
 .text {
-    color: #fff;
-    z-index: 7; /* Убедимся, что z-index текста выше, чем у маски */
-    font-family: "Dynalight", cursive;
-    font-size: 122px;
-    opacity: 0; /* Начальное значение непрозрачности */
-	transition: opacity 2s ease-in-out; /* Плавное изменение прозрачности */
+	color: #fff;
+	z-index: 7;
+	/* Убедимся, что z-index текста выше, чем у маски */
+	font-family: "Dynalight", cursive;
+	font-size: 122px;
+	opacity: 0;
+	/* Начальное значение непрозрачности */
+	transition: opacity 2s ease-in-out;
+	/* Плавное изменение прозрачности */
 }
+
 @media (max-width: 768px) {
 	.text {
 		font-size: 64px;
 	}
-}
-.container {
-	max-width: 1920px;
-	margin: 0 auto;
-	padding: 0 20px 0 20px;
 }
 
 /* === 3. HEADER === */
 
 header {
 	width: 100%;
-	max-height: 50px;
-	margin: 0 0 30px 0;
-	padding-top: 30px;
+	max-height: 70px;
+	margin: 0 0 0px 0;
+	padding: 20px 20px 20px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -143,7 +152,9 @@ header {
 
 .logo {
 	width: 50%;
+	padding-left: 20px;
 }
+
 #logo {
 	font-family: "Dynalight", cursive;
 	font-size: calc(30px + (48 - 30) * ((100vw - 320px) / (1920 - 320)));
@@ -179,27 +190,33 @@ menu {
 	width: fit-content;
 	margin-right: calc(24px + (59 - 24) * ((100vw - 991px) / (1920 - 991)));
 }
+
 .menuList>li:last-child {
 	margin-right: 0;
 }
+
 @media (min-width: 1921px) {
 	.menuList>li {
 		margin-right: 70px;
 	}
 }
+
 .menuLink {
 	color: #fff;
 	font-size: calc(13px + (24 - 13) * ((100vw - 991px) / (1920 - 991)));
 	text-decoration: none;
 }
+
 .menuLink:hover {
 	opacity: 0.8;
 }
+
 @media (min-width: 1921px) {
 	.menuLink {
 		font-size: 24px;
 	}
 }
+
 .menuSubList {
 	position: absolute;
 	top: 100%;
@@ -429,37 +446,33 @@ body._touch .menuList>li._active .menuArrow {
 /* === 4. MAIN === */
 main {
 	color: #D9D9D9;
-}
-
-.main-page-container {
-    width: 100%;
-    height: calc(100vh - 180px);
-    max-width: 1920px;
-    margin: 0 auto;
-    overflow: hidden; /* Чтобы избежать появления горизонтальной прокрутки */
-	/* position: absolute; */
+	position: relative;
 }
 
 .image-container {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	height: calc(100vh - 150px);
 }
 
 .image-container img {
-    width: 100%;
-    height: calc(100vh - 180px);
-	object-fit: cover; /* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* Сохраняет пропорции изображения и обрезает лишнее, чтобы оно занимало всю доступную область */
 }
+
 .overlay {
 	position: absolute;
-	top: 80px;
+	top: 0px;
 	left: 0;
 	width: 100vw;
 	height: 100%;
 	background-color: #000;
 	opacity: 0.5;
 	z-index: 2;
+	display: none;
 }
+
 .citation-wraper {
 	position: fixed;
 	top: 35%;
@@ -473,56 +486,63 @@ main {
 	justify-content: space-evenly;
 	font-family: "Dynalight", cursive;
 }
+
 @media (max-width: 2560px) {
 	.citation-wraper {
 		left: 20%;
 	}
 }
+
 @media (min-width: 2560px) {
 	.citation-wraper {
 		left: 27%;
 	}
 }
+
 @media (max-width: 1600px) {
 	.citation-wraper {
+		top: 45%;
 		left: 6%;
 	}
 }
+
 @media (max-width: 640px) {
 	.citation-wraper {
 		top: 30%;
 		left: 3%;
 	}
 }
+
 @media (max-width: 480px) {
 	.citation-wraper {
 		top: 35%;
 		left: 3%;
 	}
 }
+
 @media (max-width: 320px) {
 	.citation-wraper {
 		top: 20%;
 		left: 3%;
 	}
 }
+
 .picasso {
 	margin-top: 20px;
 	text-align: right;
 }
+
 .slider-main-page {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 1880px;
+	max-width: 100%;
 	height: 200px;
 	margin: 0 auto;
 	z-index: 4;
-	position: fixed;
-	bottom: 60px;
-	left: 0;
-	right: 0;
 	overflow: hidden;
+	position: absolute;
+	bottom: 7%;
 }
 
 .swiper {
@@ -533,19 +553,22 @@ main {
 	justify-content: center;
 	align-items: center;
 }
+
 .swiper-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
-    height: 100%;
+	height: 100%;
 }
+
 .swiper-slide {
 	width: 100%;
 	height: auto;
-    transition: transform 0.5s ease;
-    padding: 0;
+	transition: transform 0.5s ease;
+	padding: 0;
 }
+
 .swiper-slide img {
 	width: 100%;
 	height: auto;
@@ -556,68 +579,38 @@ main {
 footer {
 	position: relative;
 	width: 100%;
-	height: 50px;
-	margin-top: 25px;
+	max-height: 70px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 20px 20px 0 20px;
 	color: #fff;
 	z-index: 5;
 }
+
 .footer-link {
 	color: #fff;
 	text-decoration: none;
 }
+
 .footer-link:hover {
 	opacity: 0.8;
 }
 
 .line {
 	margin-bottom: 10px;
-	font-size: calc(12px + (12 - 12) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(8px + (16 - 8) * ((100vw - 320px) / (1920 - 320)));
 }
-#legal {
+
+#legal,
+#facebook {
 	text-align: right;
 }
 
-@media (max-width: 575px) {
-	
+@media (max-width: 480px) {
 	footer {
-		margin-top: 15px;
-		width: 100%;
-		height: 85px;
-		display: flex;
-		flex-direction: column-reverse;
-		z-index: 5;
-	}
-	.copyright {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: center;
-		text-align: center;
-	}
-	.legal {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: nowrap;
-		justify-content: space-between;
-		align-items: first baseline;
-		text-align: right;
-		margin-bottom: 10px;
-	}
-	#facebook {
-		text-align: left;
-	}
-	#legal {
-		text-align: right;
-	}
-	footer>div:first-child {
-		width: 100%;
-	}
-	.legal:last-child {
-		width: 100%;
+		padding: 20px 5px 0 5px;
+		
 	}
 }
 
@@ -633,7 +626,6 @@ footer {
 	max-width: 1880px;
 	height: fit-content;
 	margin: 0 auto;
-	/* margin-bottom: 20px; */
 	overflow: hidden;
 }
 
@@ -645,26 +637,31 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
+
 .swiper-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
-    height: auto;
+	height: auto;
 }
+
 .swiper-slide {
 	width: 100%;
 	height: auto;
-    transition: transform 0.5s ease;
-    padding: 0;
+	transition: transform 0.5s ease;
+	padding: 0;
 }
+
 .swiper-slide img {
 	width: 100%;
 	height: auto;
 }
+
 article {
 	margin-top: 20px;
 }
+
 h1 {
 	text-align: center;
 	padding-top: 20px;
@@ -674,27 +671,32 @@ h1 {
 h3 {
 	text-align: center;
 }
+
 @media (min-width: 767px) {
 	#wide {
 		display: none;
 	}
 }
+
 @media (max-width: 768px) {
 	#narrow {
 		display: none;
 	}
 }
+
 p {
 	margin-top: 10px;
 	font-size: 20px;
 	text-align: justify;
 }
+
 .about-picture {
 	width: 50%;
 	height: auto;
 	float: left;
 	margin-right: 20px;
 }
+
 @media (max-width: 768px) {
 	.about-picture {
 		width: 100%;
@@ -710,78 +712,78 @@ p {
 	display: grid;
 	grid-template-columns: repeat(8, 1fr);
 	grid-template-rows: repeat(8, 5vw);
-	grid-gap: 1.5rem; 
-  }
-   
-  .gallery__img {
+	grid-gap: 1.5rem;
+}
+
+.gallery__img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	display: block; 
-  }
-   
-  .gallery__item--1 {
+	display: block;
+}
+
+.gallery__item--1 {
 	grid-column-start: 1;
 	grid-column-end: 3;
 	grid-row-start: 1;
 	grid-row-end: 4;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 1 / span 2;  */
 	/* grid-row: 1 / span 2; */
-  }
-   
-  .gallery__item--2 {
+}
+
+.gallery__item--2 {
 	grid-column-start: 3;
 	grid-column-end: 5;
 	grid-row-start: 1;
 	grid-row-end: 4;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 3 / span 2;  */
 	/* grid-row: 1 / span 2; */
-  }
-   
-  .gallery__item--3 {
+}
+
+.gallery__item--3 {
 	grid-column-start: 5;
 	grid-column-end: 9;
 	grid-row-start: 1;
 	grid-row-end: 6;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 5 / span 4;
 	grid-row: 1 / span 5; */
-  }
-   
-  .gallery__item--4 {
+}
+
+.gallery__item--4 {
 	grid-column-start: 1;
 	grid-column-end: 5;
 	grid-row-start: 4;
 	grid-row-end: 9;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 1 / span 4;  */
 	/* grid-row: 3 / span 3; */
-  }
-   
-  .gallery__item--5 {
+}
+
+.gallery__item--5 {
 	grid-column-start: 5;
 	grid-column-end: 7;
 	grid-row-start: 6;
 	grid-row-end: 9;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 1 / span 4; */
 	/* grid-row: 6 / span 3; */
-  }
-   
-  .gallery__item--6 {
+}
+
+.gallery__item--6 {
 	grid-column-start: 7;
 	grid-column-end: 9;
 	grid-row-start: 6;
 	grid-row-end: 9;
-   
+
 	/** Alternative Syntax **/
 	/* grid-column: 5 / span 4; */
 	/* grid-row: 6 / span 3; */
-  }
+}
