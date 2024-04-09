@@ -610,7 +610,7 @@ footer {
 @media (max-width: 480px) {
 	footer {
 		padding: 20px 5px 0 5px;
-		
+
 	}
 }
 
@@ -715,59 +715,87 @@ p {
 	flex-wrap: wrap;
 	margin-bottom: 15px;
 	gap: 15px;
-  }
-   
-  .image-container {
+}
+
+.image-container {
 	position: relative;
 	width: 300px;
 	height: auto;
-	margin-bottom: 15px;
-  }
-  .image-overlay {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+
+figcaption {
+	margin-top: 5px;
+	font-style: italic;
+	color: #D9D9D9;
+}
+.hint {
+	font-size: 12px;
+}
+.image-overlay {
 	width: 100;
 	height: 100%;
 	opacity: 1;
-  }
-  .image-overlay:hover {
-	opacity: 0.8;
-  }
+}
 
-  /* Стили для модального окна и фонового затемнения */
+.image-overlay:hover {
+	opacity: 0.8;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-in {
+    animation: slideIn 1.5s ease forwards;
+}
+
+
+/* Стили для модального окна и фонового затемнения */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 1); /* Затемненный фон */
+	display: none;
+	position: fixed;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 1);
+	/* Затемненный фон */
 }
 
 .modal-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
 	margin: 0 auto;
 }
 
 .modal-content img {
-    max-width: 100%;
-    max-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
 	object-fit: contain;
 }
 
 .close {
-    color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	font-size: 30px;
+	cursor: pointer;
 }
 
 .close:hover {
-    color: #ccc;
+	color: #ccc;
 }

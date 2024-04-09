@@ -172,3 +172,19 @@ window.addEventListener("click", function (event) {
 		document.body.style.overflow = "auto";
 	}
 });
+
+
+
+window.addEventListener('scroll', function() {
+    let images = document.querySelectorAll('.gallery img');
+    let triggerOffset = window.innerHeight * 0.9; // Например, 80% высоты экрана
+
+    images.forEach(function(image) {
+        let bounding = image.getBoundingClientRect();
+        let imageBottom = bounding.top + bounding.height;
+
+        if (bounding.top < triggerOffset && imageBottom >= 0) {
+            image.classList.add('slide-in');
+        }
+    });
+});
