@@ -121,3 +121,54 @@ window.addEventListener("load", () => {
     }, 1000); // Задержка в 2 секунды перед появлением текста
 });
 
+// GALERY - image movement when hover
+
+let galleryImages = document.querySelectorAll('.image-container');
+let imageOverlays = document.querySelectorAll('.image-overlay');
+
+imageOverlays.forEach(function(imageOverlay, index) {
+    imageOverlay.addEventListener('mouseover', function() {
+        galleryImages[index].style.top = '-10px';
+    });
+
+    imageOverlay.addEventListener('mouseout', function() {
+        galleryImages[index].style.top = '0px';
+    });
+});
+
+/*||| MODAL WINDOWS FOR IMAGES ||| */
+
+// Get the modal and image elements
+let modal = document.getElementById("myModal");
+let modalImage = document.getElementById("modalImage");
+
+// Get all elements with the class "image-full"
+let images = document.querySelectorAll(".image-full");
+
+// Add click event listeners to each image
+for (let i = 0; i < images.length; i++) {
+	images[i].addEventListener("click", function (event) {
+		modal.style.display = "flex";
+		document.body.style.overflow = "hidden";
+		modalImage.src = this.src;
+	});
+}
+
+// Get the close button element
+let span = document.querySelector('.close');
+
+// Add click event listener to the close button
+if (span) {
+	span.addEventListener("click", function () {
+		modal.style.display = "none";
+		document.body.style.overflow = "auto";
+	});
+}
+
+// Add click event listener to the window
+window.addEventListener("click", function (event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+		document.body.style.overflow = "auto";
+	}
+});
