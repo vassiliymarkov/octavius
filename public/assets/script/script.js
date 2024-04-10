@@ -175,7 +175,7 @@ window.addEventListener("click", function (event) {
 
 
 
-window.addEventListener('scroll', function() {
+/* window.addEventListener('scroll', function() {
     let images = document.querySelectorAll('.gallery img');
     let triggerOffset = window.innerHeight * 0.9; // Например, 80% высоты экрана
 
@@ -187,4 +187,47 @@ window.addEventListener('scroll', function() {
             image.classList.add('slide-in');
         }
     });
+}); */
+
+
+
+// Получаем все изображения с классом "lazy"
+document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = document.querySelectorAll('.lazy');
+
+    function lazyLoad() {
+        lazyImages.forEach(function(image) {
+            if (isElementInViewport(image) && !image.classList.contains('loaded')) {
+                image.src = image.dataset.src;
+                image.onload = function() {
+                    image.parentElement.classList.add('loaded');
+                }
+            }
+        });
+    }
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    window.addEventListener('scroll', lazyLoad);
+    window.addEventListener('resize', lazyLoad);
+    window.addEventListener('orientationchange', lazyLoad);
+
+    lazyLoad(); // Загрузка изображений, которые видны сразу при загрузке страницы
 });
+
+
+
+/* document.addEventListener("DOMContentLoaded", function() {
+    let lazyImages = document.querySelectorAll('.lazy');
+    lazyImages.forEach(function(image) {
+        image.src = image.dataset.src;
+    });
+}); */
