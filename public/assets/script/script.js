@@ -124,14 +124,13 @@ window.addEventListener("load", () => {
 // GALERY - image movement when hover
 
 let galleryImages = document.querySelectorAll('.image-container');
-let imageOverlays = document.querySelectorAll('.image-overlay');
 
-imageOverlays.forEach(function(imageOverlay, index) {
-    imageOverlay.addEventListener('mouseover', function() {
+galleryImages.forEach(function(imageContainer, index) {
+    imageContainer.addEventListener('mouseover', function() {
         galleryImages[index].style.top = '-10px';
     });
 
-    imageOverlay.addEventListener('mouseout', function() {
+    imageContainer.addEventListener('mouseout', function() {
         galleryImages[index].style.top = '0px';
     });
 });
@@ -172,23 +171,6 @@ window.addEventListener("click", function (event) {
 		document.body.style.overflow = "auto";
 	}
 });
-
-
-
-/* window.addEventListener('scroll', function() {
-    let images = document.querySelectorAll('.gallery img');
-    let triggerOffset = window.innerHeight * 0.9; // Например, 80% высоты экрана
-
-    images.forEach(function(image) {
-        let bounding = image.getBoundingClientRect();
-        let imageBottom = bounding.top + bounding.height;
-
-        if (bounding.top < triggerOffset && imageBottom >= 0) {
-            image.classList.add('slide-in');
-        }
-    });
-}); */
-
 
 
 // Получаем все изображения с классом "lazy"
