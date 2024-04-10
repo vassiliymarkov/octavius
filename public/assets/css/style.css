@@ -786,3 +786,31 @@ figcaption {
 .close:hover {
 	color: #ccc;
 }
+
+/* VIDEO */
+  
+.video-container {
+	max-width: 300px;
+	padding: 0px 0px;
+}
+/* .item-video {
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 56% 0px;
+}
+
+.item-video iframe {
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 168.75px;
+}
+
+.item-text {
+	color: #fff;
+	font-size: 1.5rem;
+	line-height: 150%;
+	padding: 30px 20px 0px 20px;
+	margin-left: 10px;
+} */
