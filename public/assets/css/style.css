@@ -141,10 +141,9 @@ body {
 /* === 3. HEADER === */
 
 header {
-	width: 100%;
+	width: 1880px;
 	max-height: 70px;
-	margin: 0 0 0 0;
-	padding: 20px 60px 20px 0;
+	padding: 20px 20px 20px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -593,12 +592,12 @@ footer {
 	z-index: 5;
 }
 
-.footer-link {
+.footer-link, .press-link {
 	color: #fff;
 	text-decoration: none;
 }
 
-.footer-link:hover {
+.footer-link:hover, .press-link {
 	opacity: 0.8;
 }
 
@@ -838,4 +837,32 @@ figcaption {
 		width: 280px;
 		height: 158px;
 	}
+}
+.press-title-wraper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+}
+.press-title-photo-wraper {
+	width: 10%;
+	margin-right: 100px;
+}
+.press-title-image {
+	/* margin-right: 150px; */
+}
+.press-title {
+	/* display: inline-block; */
+}
+.press-article {
+	display: flex;
+}
+.press-image{
+	max-width: 600px;
+	height: auto;
+	margin: 20px 30px 15px 40px;
+}
+.source, .press-source	{
+	margin-top: 15px;
+	font-size: 18px;
 }
