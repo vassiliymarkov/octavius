@@ -143,11 +143,14 @@ body {
 header {
 	width: 100%;
 	max-height: 70px;
-	margin: 0 0 0px 0;
-	padding: 20px 20px 20px 0;
+	margin: 0 0 0 0;
+	padding: 20px 60px 20px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	position: fixed;
+	z-index: 5;
+	background-color: #000;
 }
 
 .logo {
@@ -319,6 +322,7 @@ body._touch .menuList>li._active .menuArrow {
 		cursor: pointer;
 		margin-left: 0px;
 		margin-top: 0px;
+		margin-right: 20px;
 	}
 
 	.menuIcon span,
@@ -447,11 +451,13 @@ body._touch .menuList>li._active .menuArrow {
 main {
 	color: #D9D9D9;
 	position: relative;
+	padding-top: 100px;
+	
 }
 
 .main-image-container {
 	width: 100%;
-	height: calc(100vh - 150px);
+	height: calc(100vh - 180px);
 }
 
 .main-image-container img {
@@ -723,18 +729,25 @@ p {
 	height: auto;
 	margin-bottom: 20px;
 	font-size: 14px;
-	opacity: 0; /* Устанавливаем изначальную непрозрачность */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Добавляем переходы для opacity и transform */
-    transform: translateY(20px); /* Сдвигаем изображение вниз на 20 пикселей */
+	opacity: 0;
+	/* Устанавливаем изначальную непрозрачность */
+	transition: opacity 0.5s ease, transform 0.5s ease;
+	/* Добавляем переходы для opacity и transform */
+	transform: translateY(20px);
+	/* Сдвигаем изображение вниз на 20 пикселей */
 }
+
 .image-container img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 }
+
 .image-container.loaded {
-    opacity: 1; /* При добавлении класса "loaded" изображение станет видимым */
-    transform: translateY(0); /* При добавлении класса "loaded" изображение сдвигается вверх на 20 пикселей */
+	opacity: 1;
+	/* При добавлении класса "loaded" изображение станет видимым */
+	transform: translateY(0);
+	/* При добавлении класса "loaded" изображение сдвигается вверх на 20 пикселей */
 }
 
 figcaption {
@@ -742,6 +755,7 @@ figcaption {
 	font-style: italic;
 	color: #D9D9D9;
 }
+
 .hint {
 	font-size: 12px;
 }
@@ -788,29 +802,40 @@ figcaption {
 }
 
 /* VIDEO */
-  
+
 .video-container {
-	max-width: 300px;
-	padding: 0px 0px;
-}
-/* .item-video {
-	margin: 0px 0px 20px 0px;
-	padding: 0px 0px 56% 0px;
+	max-width: 560px;
+	height: 315px;
+	margin-bottom: 50px;
 }
 
-.item-video iframe {
-	object-fit: cover;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 300px;
-	height: 168.75px;
+.lazy-video {
+	width: 560px;
+	height: 315px;
+}
+@media (max-width: 1600px) {
+	.lazy-video, .video-container {
+		width: 600px;
+		height: 366px;
+	}
+}
+@media (max-width: 480px), (max-width: 1200px) {
+	.lazy-video, .video-container {
+		width: 300px;
+		height: 169px;
+	}
 }
 
-.item-text {
-	color: #fff;
-	font-size: 1.5rem;
-	line-height: 150%;
-	padding: 30px 20px 0px 20px;
-	margin-left: 10px;
-} */
+@media (max-width: 640px) {
+	.lazy-video, .video-container {
+		width: 568px;
+		height: 315px;
+	}
+}
+
+@media (max-width: 320px) {
+	.lazy-video, .video-container {
+		width: 280px;
+		height: 158px;
+	}
+}

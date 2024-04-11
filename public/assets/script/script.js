@@ -204,12 +204,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     lazyLoad(); // Загрузка изображений, которые видны сразу при загрузке страницы
 });
-
-
-
-/* document.addEventListener("DOMContentLoaded", function() {
-    let lazyImages = document.querySelectorAll('.lazy');
-    lazyImages.forEach(function(image) {
-        image.src = image.dataset.src;
-    });
-}); */
