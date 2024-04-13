@@ -547,13 +547,13 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 1920px;
+	max-width: 1840px;
 	height: 200px;
-	margin: 0 auto;
+/* 	margin: 0 auto; */
 	z-index: 4;
 	overflow: hidden;
 	position: absolute;
-	left: 0;
+	left: 20px;
 	bottom: 7%;
 }
 
