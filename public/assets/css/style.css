@@ -148,9 +148,9 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
+	position: relative;
+/* 	top: 0;
+	left: 0; */
 	z-index: 5;
 	background-color: #000;
 }
@@ -453,13 +453,17 @@ body._touch .menuList>li._active .menuArrow {
 main {
 	color: #D9D9D9;
 	position: relative;
-	padding-top: 100px;
-	
+	padding-top: 0px;
+}
+
+.main-page {
+	max-width: 1920px;
+	margin: 0 auto;
 }
 
 .main-image-container {
 	width: 100%;
-	height: calc(100vh - 180px);
+	height: calc(100vh - 260px);
 }
 
 .main-image-container img {
@@ -481,9 +485,9 @@ main {
 }
 
 .citation-wraper {
-	position: fixed;
+	position: absolute;
 	top: 35%;
-	left: 10%;
+	left: 0;
 	color: #fff;
 	z-index: 4;
 	font-family: "Dynalight", cursive;
@@ -496,7 +500,7 @@ main {
 
 @media (max-width: 2560px) {
 	.citation-wraper {
-		left: 20%;
+		left: 10%;
 	}
 }
 
@@ -543,12 +547,13 @@ main {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 100%;
+	max-width: 1920px;
 	height: 200px;
 	margin: 0 auto;
 	z-index: 4;
 	overflow: hidden;
 	position: absolute;
+	left: 0;
 	bottom: 7%;
 }
 
