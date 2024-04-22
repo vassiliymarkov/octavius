@@ -822,9 +822,9 @@ figcaption {
 	display: block;
 	color: #fff;
 	position: absolute;
-	top: 50px;
+	top: 65px;
 	right: 30px;
-	font-size: 60px;
+	font-size: 40px;
 	cursor: pointer;
 	z-index: 500;
 }
