@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dynalight&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Octavius</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="mask">
+        <div class="text">
+            Octavius
+        </div>
+    </div>
+
+        <header>
+            <div class="logo">
+                <a href="index.html" class="menuLink" id="logo">Octavius</a>
+            </div>
+            <menu>
+                <div class="menuContainer">
+                    <div class="upperMenu menu">
+                        <div class="menuIcon">
+                            <span></span>
+                        </div>
+                        <nav class="menuBody">
+                            <ul class="menuList">
+                                <li><a href="about.html" class="menuLink">Qui sommes nous ?</a></li>
+                                <li><a href="gallery.html" class="menuLink">Galerie</a></li>
+                                <li><a href="#" class="menuLink">Videos</a>
+                                    <span class="menuArrow"></span>
+                                    <ul class="menuSubList">
+                                        <li>
+                                            <a href="classic.html" class="menuSubLink">Classique</a>
+                                        </li>
+                                        <li>
+                                            <a href="jazz.html" class="menuSubLink">Jazz</a>
+                                        </li>
+                                        <li>
+                                            <a href="tzigane.html" class="menuSubLink">Tzigane</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="press.html" class="menuLink">Press</a></li>
+                                <li><a href="contact.html" class="menuLink" id="lasMenuLink">Contactez-nous</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </menu>
+        </header>
+
+    </div>
+
+    <main class="main-page">
+        <div class="overlay">
+
+        </div>
+        <div class="citation-wraper">
+            <div class="citation">
+                L'art lave nos âmes<br>de la poussière du quotidien
+            </div>
+            <div class="picasso">
+                Picasso
+            </div>
+        </div>
+        <div class="main-image-container">
+            <img src="assets/img/background_image-1920-1080.jpeg" alt="Liviu BADIU">
+        </div>
+
+
+
+    </main>
+
+    <div class="container">
+
+    <footer>
+        <div class="copyright">
+            <div class="line">Octavius. Tous droits réservés. &copy 2024
+            </div>
+            <div class="line"><a href="#" class="footer-link">Réalisé par The лучший разраб в Глоньере</a></div>
+        </div>
+        <div class="legal">
+            <div class="line" id="facebook"><a href="https://www.facebook.com/profile.php?id=100070592883453" class="footer-link">Retrouvez-nous sur Facebook</a>
+            </div>
+            <div class="line" id="legal"><a href="mentiones-legales.html" class="footer-link">Mentions légales</a></div>
+        </div>
+    </footer>
+
+
+
+    <div class="slider-main-page">
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                <div class="swiper-slide"><img src="assets/img/main_slaider/09.jpeg" alt=""></div>
+                ...
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/script/script.js"></script>
+    <script src="assets/script/swiper_one.js"></script>
+
+</body>
+
+</html>

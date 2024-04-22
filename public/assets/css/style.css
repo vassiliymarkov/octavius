@@ -819,12 +819,14 @@ figcaption {
 }
 
 .close {
+	display: block;
 	color: #fff;
 	position: absolute;
-	top: 10px;
-	right: 20px;
-	font-size: 30px;
+	top: 50px;
+	right: 30px;
+	font-size: 60px;
 	cursor: pointer;
+	z-index: 500;
 }
 
 .close:hover {
