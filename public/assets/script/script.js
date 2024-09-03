@@ -171,3 +171,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     lazyLoad(); // Загрузка изображений, которые видны сразу при загрузке страницы
 });
+
+/* LAZY LOAD */
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyLoadContainers = document.querySelectorAll('.lazy-load-container');
+
+    // Настраиваем Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Останавливаем наблюдение после загрузки
+            }
+        });
+    }, {
+        threshold: 0.3 // Процент видимости элемента, при котором он загружается (например, 30%)
+    });
+
+    // Добавляем каждый элемент в Observer
+    lazyLoadContainers.forEach(container => {
+        observer.observe(container);
+    });
+});
