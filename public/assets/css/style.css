@@ -1000,6 +1000,15 @@ figcaption {
 }
 .toggle-button {
     cursor: pointer;
+}.lazy-load-container {
+    opacity: 0;
+    transform: translateY(20px); /* Начальная позиция для анимации */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.lazy-load-container.visible {
+    opacity: 1;
+    transform: translateY(0); /* Конечная позиция для анимации */
 }
 @media (max-width: 639px) {
 	.announce {
