@@ -32,8 +32,10 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Affiche</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>
+        <?php echo isset($pageTitle) ? htmlspecialchars($pageTitle) : 'Octavius'; ?>
+    </title>
 </head>
 
 <body>
@@ -79,38 +81,53 @@
         <main>
             <h1 class="page-title">Concerts à venir</h1><br>
             <section>
-                <article>
-                    <h2>Titre de concert</h2>
+                <article class="lazy-load-container">
+                    <h2>Test</h2>
                     <div class="announce">
                         <div class="announce-img">
-                            <img src="assets/img/announces/06.jpg" alt="" class="announce-image">
+                            <img src="assets/img/01.jpeg" alt="" class="announce-image">
                         </div>
                         <div class="announce-text">
                             <p class="concert-descripton">
-                                Ut eget ornare odio, ut consectetur purus. Etiam id odio mi. Aliquam in rutrum dolor.
-                                Etiam gravida ex at hendrerit scelerisque. Morbi placerat turpis cursus urna pharetra
-                                scelerisque. Integer ultrices sapien ac orci malesuada placerat.
+                                Test
                             </p>
                             <p class="concert-participants">
                                 Sur scène :
                             <ul class="participants">
-                                <li>Musicien 1 - Violon</li>
-                                <li>Musicien 2 - Violon</li>
-                                <li>Musicien 3 - Bass</li>
-                                <li>Musicien 4 - Piano</li>
+                                <li>Musician 1 - violon</li>
+                                <li>Musician 2 - violon</li>
+                                <li>Musician 3 - bass</li>
+                                <li>Musician 4 - piano</li>
                             </ul>
                             </p>
-                            <p class="concert-programme-toggle">
-                                <span class="toggle-button">Cliquez ici pour consulter le programme des concert</span>
+                            <p class="concert-address">
+                                Église Saint Thomas de la Fleche
                             </p>
-                            <div class="concert-programme">
-                                <!-- Программа концерта -->
-                                <ol>
-                                    <li>Composition</li>
-                                    <li>Composition</li>
-                                    <li>Composition</li>
-                                </ol>
-                            </div>
+                            <p class="concert-date">
+                                22 Octobre 2023 à 20 heures
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="lazy-load-container">
+                    <h2>Test</h2>
+                    <div class="announce">
+                        <div class="announce-img">
+                            <img src="assets/img/01.jpeg" alt="" class="announce-image">
+                        </div>
+                        <div class="announce-text">
+                            <p class="concert-descripton">
+                                Test
+                            </p>
+                            <p class="concert-participants">
+                                Sur scène :
+                            <ul class="participants">
+                                <li>Musician 1 - violon</li>
+                                <li>Musician 2 - violon</li>
+                                <li>Musician 3 - bass</li>
+                                <li>Musician 4 - piano</li>
+                            </ul>
+                            </p>
                             <p class="concert-address">
                                 Église Saint Thomas de la Fleche
                             </p>
@@ -122,6 +139,7 @@
                 </article>
             </section>
         </main>
+
 
         <footer>
             <div class="copyright">
