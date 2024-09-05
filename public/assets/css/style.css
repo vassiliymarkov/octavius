@@ -16,7 +16,7 @@
 
 /* 1. NORMALIZING STYLES */
 
-* {
+*, section {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -160,19 +160,20 @@ header {
 }
 
 .logo {
-	width: 50%;
+	width: 30%;
+	height: fit-content;
 	padding-left: 20px;
 }
 
 #logo {
 	font-family: "Dynalight", cursive;
-	font-size:calc (30px + (48 - 30) * ((100vw - 320px) / (1920 - 320)));
+	font-size: calc(30px + (46 - 30) * ((100vw - 320px) / (1920 - 320)));
 	color: #fff;
 }
 
 /* == 3.1 MENU === */
 menu {
-	width: 50%;
+	width: 70%;
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -219,7 +220,9 @@ menu {
 .menuLink:hover {
 	opacity: 0.8;
 }
-
+#affiche {
+	color: #FF0303;
+}
 @media (min-width: 1921px) {
 	.menuLink {
 		font-size: 23px;
@@ -982,25 +985,7 @@ figcaption {
 .participants li, .concert-programme li {
 	margin: 10px;
 }
-.concert-programme ol:last-child {
-	margin-bottom: 20px;
-}
-.concert-programme ol {
-    list-style-position: inside;
-    padding-left: 0;
-    margin: 0;
-}
-.concert-programme {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-}
-.concert-programme.open {
-    max-height: 10000px; /* Задайте высоту больше, чем может занимать содержимое */
-}
-.toggle-button {
-    cursor: pointer;
-}.lazy-load-container {
+.lazy-load-container {
     opacity: 0;
     transform: translateY(20px); /* Начальная позиция для анимации */
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
@@ -1150,13 +1135,14 @@ textarea {
 .add-form {
 	position: relative;
 	width: 100%;
-	margin: 150px auto;
+	margin: 50px auto;
 }
 
 .title-admin {
 	width: 280px;
 	text-align: center;
 	line-height: 20px;
+	margin-bottom: 10px;
 }
 
 /* Скрываем стандартный input для загрузки файла */
@@ -1169,7 +1155,7 @@ textarea {
 	background-color: #012E64;
 	border: 1px solid #6663E2;
 	border-radius: 5px;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 	width: 280px;
 	height: 35px;
 	color: white;
@@ -1180,7 +1166,7 @@ textarea {
 	display: inline-block;
 }
 #fileNameDisplay {
-	margin-top: 10px;
+	margin: 10px 0;
 	
 }
 
@@ -1282,13 +1268,13 @@ textarea {
 	width: 100%;
 	margin-top: 25px;
 }
-
 .add-info {
 	width: 280px;
 	height: 40px;
 	background-color: #012E64;
 	border: 1px solid #6663E2;
 	color: #fff;
+	margin: 10px 0 15px 0;
 }
 
 .add-info-text {
